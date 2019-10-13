@@ -1,7 +1,7 @@
 {
-  "name": "@network-utils/arp-scanner",
-  "version": "1.1.0",
-  "description": "A simple TCP ping util, written in Typescript, to test the reachability and latency of a host.",
+  "name": "@network-utils/tcp-scanner",
+  "version": "0.1.0",
+  "description": "A dead simple promise-based TCP scanner, written in Typescript.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -17,12 +17,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/justintaddei/arp-scanner.git"
+    "url": "git+https://github.com/justintaddei/tcp-scanner.git"
   },
   "bugs": {
-    "url": "https://github.com/justintaddei/arp-scanner/issues"
+    "url": "https://github.com/justintaddei/tcp-scanner/issues"
   },
-  "homepage": "https://github.com/justintaddei/arp-scanner",
+  "homepage": "https://github.com/justintaddei/tcp-scanner",
   "engines": {
     "node": ">=8.10.0"
   },
