@@ -32,14 +32,8 @@ Scans the network for hosts with `port` open.
 
 ---
 
-## Testing
-
-```bash
-$ git clone https://github.com/justintaddei/tcp-scanner.git
-$ cd tcp-scanner
-$ npm install
-$ npm test
-```
+## To-Do
+- Add tests
 
 ## License
 
