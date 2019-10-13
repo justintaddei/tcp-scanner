@@ -34,7 +34,7 @@ async function getIPs(range: string) {
  * @param range A valid range in CIDR Notation or `"arp"` to limit the scanned hosts to those present on the arp table (faster, but might not find every host)
  * @param timeout The timeout before giving up on any one host
  */
-export function scan(port: number, range: string = 'arp', timeout = 200) {
+export function scan(port: number, range: string = 'arp', timeout = 200): Promise<string[]> {
   return new Promise(async resolve => {
     if (port < 1) throw new Error('Negative port')
 
