@@ -1,6 +1,6 @@
 import { getTable } from '@network-utils/arp-lookup'
 import { probe } from '@network-utils/tcp-ping'
-import { cidrSubnet, toLong, fromLong } from 'ip'
+import { cidrSubnet, fromLong, toLong } from 'ip'
 
 /**
  * Parses a CIDR range into an array of IP addresses.
@@ -42,14 +42,14 @@ export function scan(port: number, range: string = 'arp', timeout = 200) {
 
     const connections = []
 
-    for (const ip of ips) {
+    for (const IP of ips) {
       ;(ip => {
         connections.push(
           probe(port, ip, timeout).then(open => {
             return { ip, open }
           })
         )
-      })(ip)
+      })(IP)
     }
 
     const hosts = await Promise.all(connections)
